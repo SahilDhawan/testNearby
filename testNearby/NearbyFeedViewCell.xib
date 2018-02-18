@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Ubuntu-Regular.ttf">
+            <string>Ubuntu-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NearbyFeedViewCell" customModule="SO" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="225"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTG-D6-mKJ" customClass="CardArticle" customModule="Cards">
+                    <rect key="frame" x="0.0" y="150" width="180" height="75"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="tf"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nNL-yz-FPA">
+                    <rect key="frame" x="-30" y="48" width="240" height="128"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cool, Tall Glasses of Summer Bliss | These Places Serve the Best Ice Tea in Town!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEZ-Do-QT6">
+                            <rect key="frame" x="40" y="36" width="160" height="55"/>
+                            <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="iEZ-Do-QT6" secondAttribute="bottom" constant="10" id="9Gm-Mr-CHh"/>
+                        <constraint firstAttribute="trailing" secondItem="iEZ-Do-QT6" secondAttribute="trailing" constant="10" id="eXR-wR-wFj"/>
+                        <constraint firstItem="iEZ-Do-QT6" firstAttribute="leading" secondItem="nNL-yz-FPA" secondAttribute="leading" constant="10" id="nkN-um-PWX"/>
+                        <constraint firstAttribute="height" constant="75" id="sgH-Z5-gdq"/>
+                        <constraint firstItem="iEZ-Do-QT6" firstAttribute="top" secondItem="nNL-yz-FPA" secondAttribute="top" constant="10" id="zng-LZ-WoB"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="FTG-D6-mKJ" secondAttribute="trailing" id="5qj-Su-4qG"/>
+                <constraint firstItem="FTG-D6-mKJ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="85t-9h-7Af"/>
+                <constraint firstItem="FTG-D6-mKJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="CXK-Oo-M9j"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="nNL-yz-FPA" secondAttribute="bottom" id="H9D-ua-Fcd"/>
+                <constraint firstAttribute="trailing" secondItem="nNL-yz-FPA" secondAttribute="trailing" id="T9F-fY-5f7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="FTG-D6-mKJ" secondAttribute="bottom" id="n9P-8W-HOD"/>
+                <constraint firstItem="nNL-yz-FPA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pYv-cG-OFZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="feedCardArticle" destination="FTG-D6-mKJ" id="4uo-FN-4Ft"/>
+                <outlet property="feedTitleLabel" destination="iEZ-Do-QT6" id="osl-Xc-b0C"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="tf" width="828" height="444"/>
+    </resources>
+</document>
